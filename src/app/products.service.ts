@@ -7,6 +7,6 @@ export class ProductsService {
   private resource: HttpResourceRef<IProduct[] | undefined> = httpResource(() => '/api/products');
 
   getProducts() {
-    return computed(() => this.resource.value() ?? []);
+    return computed(() => this.resource.hasValue() ? this.resource.value() : []);
   }
 }
