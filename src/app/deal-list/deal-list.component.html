@@ -1,0 +1,19 @@
+@if (products().length === 0) {
+  <p class="empty-state">No deals today</p>
+} @else {
+  <ul class="deal-list">
+    @for (product of products(); track product.id) {
+      <li class="deal">
+        <h2>{{ product.name }}</h2>
+        <p class="original-price">
+          <span>Original price:</span>
+          {{ product.price | currency }}
+        </p>
+        <p class="discounted-price">
+          <span>Discounted price:</span>
+          {{ product.price * (1 - product.discount) | currency }}
+        </p>
+      </li>
+    }
+  </ul>
+}

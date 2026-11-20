@@ -1,0 +1,7 @@
+<ul>
+  @for (product of products(); track product.id) {
+  <li class="blue-border">
+    <bot-product-details [product]="product" />
+  </li>
+  }
+</ul>

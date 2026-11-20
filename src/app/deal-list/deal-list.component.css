@@ -1,0 +1,35 @@
+:host {
+  display: block;
+}
+
+.deal-list {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.deal {
+  padding: 1rem;
+  border: 1px solid #777;
+  border-radius: 0.25rem;
+}
+
+.deal h2 {
+  margin-top: 0;
+}
+
+.deal p,
+.empty-state {
+  margin-bottom: 0;
+}
+
+.original-price {
+  text-decoration: line-through;
+}
+
+.discounted-price {
+  color: #9c3c78;
+  font-weight: 700;
+}
